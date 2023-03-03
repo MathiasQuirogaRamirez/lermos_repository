@@ -1,0 +1,360 @@
+/****** general ******/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Aboreto", cursive;
+}
+
+/*** imports ***/
+/*** mixins ***/ /*** colors ***/ /*** header ***/
+header {
+  position: relative;
+  font-size: 1rem;
+  background-color: #FFBD59;
+  border-bottom: 3px solid black;
+  /*** for boostrap ***/
+}
+header .logo {
+  width: 300px;
+  height: 300px;
+}
+header nav, header .nav_boostrap {
+  list-style-type: none;
+  position: absolute;
+  right: 5%;
+  bottom: 1rem;
+}
+header nav .li_nav, header .nav_boostrap .li_nav {
+  display: inline;
+  text-align: center;
+  padding: 1rem;
+  border-left: 3px solid black;
+}
+header nav .li_nav .link_nav, header .nav_boostrap .li_nav .link_nav {
+  text-decoration: none;
+  color: black;
+}
+header .nav_boostrap {
+  bottom: -3px;
+}
+
+/*************** footer ***************/
+.container_footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: none;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  width: 100%;
+  background-color: black;
+  padding: 1rem;
+  column-gap: 3rem;
+  row-gap: 1rem;
+  text-align: center;
+}
+footer h3 {
+  color: #FFBD59;
+  padding-bottom: 1rem;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  color: white;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer_bottom {
+  color: white;
+  grid-column: 1/4;
+  margin: 1rem;
+}
+
+.footer_iframe {
+  width: 250px;
+  height: 250px;
+  border: 3px solid #FFBD59;
+}
+
+/*********** footer  boostrap **************/
+.footer_bootstrap {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+.footer_bootstrap h3 {
+  color: #FFBD59;
+}
+.footer_bootstrap ul {
+  list-style: none;
+}
+.footer_bootstrap ul a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: #ffe4c4;
+}
+
+.flex_container_items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: none;
+}
+
+/****** items ******/
+.item_article {
+  display: inline-block;
+  width: 350px;
+  background-color: #FFBD59;
+  text-align: center;
+  margin: 1rem;
+}
+.item_article img {
+  width: 100%;
+  height: 500px;
+}
+.item_article p {
+  background-color: #78767c;
+  color: white;
+  padding: 1rem;
+}
+
+/*********************/
+/*************** index ***************/
+.front_page {
+  width: 100%;
+  height: 800px;
+}
+
+/*** round image ***/
+.flex_container_image_round {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: none;
+  background-color: #ffe4c4;
+}
+
+.round_image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+
+.round_image_article {
+  display: inline-block;
+  padding: 50px;
+  text-align: center;
+}
+
+.bottom_line {
+  background-color: black;
+  width: 200px;
+  height: 3px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #FFBD59;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+/*************** best seller ***************/
+.background_body {
+  background-color: #ffe4c4;
+}
+
+.card {
+  margin: 1rem;
+}
+
+.flex_container_horizontal {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: start;
+  margin: 1rem;
+  color: #FFBD59;
+}
+.flex_container_horizontal h1 {
+  font-size: 2rem;
+  margin: 1rem;
+}
+.flex_container_horizontal p {
+  color: black;
+  margin: 1rem;
+}
+
+.btn {
+  width: 200px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.flex_container_vertical {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: none;
+}
+.flex_container_vertical img {
+  width: 200px;
+  height: 200px;
+}
+
+.star_rating {
+  text-align: center;
+}
+
+.checked {
+  color: #FFBD59;
+}
+
+/*************** form ***************/
+.form_container {
+  background-color: #78767c;
+  border-radius: 1rem;
+  margin: 5rem;
+}
+.form_container section {
+  background-image: url("../assets/images/logo_gray.png");
+  background-repeat: space;
+  background-size: 10rem;
+  border-radius: 1rem;
+  padding: 10rem;
+}
+
+form {
+  background-color: #ffe4c4;
+  border: 3px solid black;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+form h1 {
+  margin: 2rem;
+  text-align: center;
+}
+form input {
+  width: 100%;
+  height: 2rem;
+  border-radius: 1rem;
+}
+form textarea {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 1rem;
+}
+form article {
+  padding: 1rem;
+}
+
+.flex_horizontal {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: none;
+}
+.flex_horizontal article {
+  width: 100%;
+}
+
+@media (max-width: 780px) {
+  /* header */
+  header {
+    font-size: 0.75rem;
+  }
+  header .logo {
+    width: 200px;
+    height: 200px;
+  }
+  .flex_container_items {
+    justify-content: center;
+  }
+  /* contact */
+  .form_container {
+    background-color: #ffe4c4;
+    border-radius: 5px;
+    margin: 2rem;
+  }
+  .form_container section {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+  form {
+    padding: 5px;
+  }
+  form h1 {
+    margin: 1rem;
+  }
+  form article {
+    padding: 5px;
+  }
+  .flex_horizontal {
+    flex-flow: row wrap;
+  }
+  /* footer */
+  footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  .footer_bottom {
+    grid-column: 1/span 2;
+  }
+  .footer_iframe {
+    width: 100%;
+    grid-column: 1/span 2;
+  }
+}
+@media (max-width: 780px) and (max-width: 500px) {
+  /* header */
+  header {
+    font-size: 0.5rem;
+  }
+  header .logo {
+    width: 180px;
+    height: 180px;
+  }
+  /* best sellers */
+  .flex_container_horizontal {
+    justify-content: center;
+  }
+  .flex_container_horizontal h1 {
+    font-size: 1rem;
+  }
+  .flex_container_horizontal {
+    flex-wrap: wrap;
+  }
+  .flex_container_horizontal h1 {
+    font-size: 1rem;
+  }
+  /* footer */
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+  }
+  .footer_bottom {
+    grid-column: 1/span 1;
+  }
+  .footer_iframe {
+    width: 100%;
+    grid-column: 1/span 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

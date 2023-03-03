@@ -1,0 +1,35 @@
+/*** header ***/
+header {
+    position: relative;
+    font-size: 1rem;
+    background-color: $orange;
+    border-bottom: 3px solid black;
+
+    .logo {
+        width: 300px;
+        height: 300px;
+    }
+
+    nav {
+        list-style-type: none;
+        position: absolute;
+        right: 5%;
+        bottom: 1rem;
+        .li_nav {
+            display: inline;
+            text-align: center;
+            padding: 1rem;
+            border-left: 3px solid black;
+            .link_nav {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
+    /*** for boostrap ***/
+    .nav_boostrap {
+        @extend nav;
+        bottom: -3px;
+    }
+}

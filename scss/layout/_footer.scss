@@ -1,0 +1,61 @@
+/*************** footer ***************/
+.container_footer {
+    @include flex(row nowrap, center, none);
+ }
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    width: 100%;
+    background-color: black;
+    padding: 1rem;
+    column-gap: 3rem;
+    row-gap: 1rem;
+    text-align: center;
+
+    h3 {
+        color: $orange;
+        padding-bottom: 1rem;
+    }
+
+    ul {
+        list-style: none;
+        li {
+            color: white;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+.footer_bottom {
+    color: white;
+    grid-column: 1 / 4;
+    margin: 1rem;
+}
+
+.footer_iframe {
+    width: 250px;
+    height: 250px;
+    border: 3px solid $orange;
+}
+
+/*********** footer  boostrap **************/
+.footer_bootstrap {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    h3 {
+        color: $orange;
+    }
+    ul {
+        list-style: none;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
