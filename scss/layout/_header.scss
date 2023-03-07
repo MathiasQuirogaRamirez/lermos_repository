@@ -6,8 +6,13 @@ header {
     border-bottom: 3px solid black;
 
     .logo {
+        position: relative;
         width: 300px;
         height: 300px;
+        animation-name: move_logo;
+        animation-timing-function: ease-in;
+        animation-duration: 7500ms;
+        animation-delay: 2000ms;
     }
 
     nav {

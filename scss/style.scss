@@ -80,6 +80,25 @@ body {
 }
 
 /*************** best seller ***************/
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: $bisque;
+}
+
+/*
+.desktop {
+    visibility: hidden;
+    height: 0px;
+}
+*/
+
+.tablet {
+    visibility: hidden;
+    height: 0px;
+}
+
 .background_body {
     background-color: $bisque;
 }

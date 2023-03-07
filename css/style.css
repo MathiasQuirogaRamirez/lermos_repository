@@ -6,7 +6,32 @@
 }
 
 /*** imports ***/
-/*** mixins ***/ /*** colors ***/ /*** header ***/
+/*** mixins ***/
+/* header animation */
+@keyframes move_logo {
+  0% {
+    transform: scale(1, 1);
+    left: 0%;
+  }
+  25% {
+    transform: scale(0.75, 0.75);
+    left: 50%;
+  }
+  50% {
+    transform: scale(0.5, 0.5) rotate(180deg);
+    left: 85%;
+  }
+  75% {
+    transform: scale(0.75, 0.75);
+    left: 50%;
+  }
+  100% {
+    transform: scale(1, 1);
+    left: 0%;
+  }
+}
+/* flexbox */
+/*** colors ***/ /*** header ***/
 header {
   position: relative;
   font-size: 1rem;
@@ -15,8 +40,13 @@ header {
   /*** for boostrap ***/
 }
 header .logo {
+  position: relative;
   width: 300px;
   height: 300px;
+  animation-name: move_logo;
+  animation-timing-function: ease-in;
+  animation-duration: 7500ms;
+  animation-delay: 2000ms;
 }
 header nav, header .nav_boostrap {
   list-style-type: none;
@@ -173,6 +203,23 @@ body {
 }
 
 /*************** best seller ***************/
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #ffe4c4;
+}
+
+/*
+.desktop {
+    visibility: hidden;
+    height: 0px;
+}
+*/
+.tablet {
+  visibility: hidden;
+  height: 0px;
+}
+
 .background_body {
   background-color: #ffe4c4;
 }
