@@ -6,7 +6,7 @@
 }
 
 /*** imports ***/
-@import "base/mixins";
+@import "base/base";
 @import "base/colors";
 @import "layout/header";
 @import "layout/footer";
@@ -15,30 +15,66 @@ body {
     background-color: $bisque;
 }
 
+.container_body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+}
+
 .flex_container_items {
-    @include flex(row wrap, space-between, none);
+    @include flex (row wrap, space-between, none);
 }
 
 /****** items ******/
 .item_article {
-    display: inline-block;
+    display: block;
     width: 350px;
-    background-color: $orange;
-    text-align: center;
-    margin: 1rem;
+    height: auto;
+    margin: 2rem;
+    background-color: $orange; 
 
      img {
         width: 100%;
         height: 500px;
     }
 
+    div {
+        @include flex (column nowrap, center, none);
+        height: 75px;     
+        padding: 1rem;   
+        text-align: center;
+        background-color: $orange;
+    }
+
     p {
+        font-size: 0.85rem;
+        padding: 1rem;
+        height: 400px;
+        overflow: auto;
         background-color: $gray;
         color: white;
-        padding: 1rem;
     }
 }
 
+/*** scroll ***/
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 5px 5px 5px white; 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $orange; 
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: black; 
+}
 /*********************/
 
 /*************** index ***************/
@@ -108,7 +144,7 @@ body {
 }
 
 .flex_container_horizontal {
-    @include flex(row nowrap, none, start);
+    @include flex (row nowrap, none, start);
     margin: 1rem;
     color: $orange;
     h1 {
@@ -128,7 +164,7 @@ body {
 }
 
 .flex_container_vertical {
-    @include flex(column nowrap, none, none);
+    @include flex (column nowrap, none, none);
     img {
         width: 200px;
         height: 200px;
@@ -184,25 +220,35 @@ form {
 }
 
 .flex_horizontal {
-    @include flex(row nowrap, none, none);
+    @include flex (row nowrap, none, none);
     article {
         width: 100%;
      }
  }
 
+ /*** media query ***/
  @media (max-width: 780px) {
 
     /* header */
     header {
         font-size: 0.75rem;
         .logo {
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
         }
+    }
+
+    .front_page {
+        height: 650px;
     }
 
     .flex_container_items {
         justify-content: center;
+    }
+
+     /* items */
+     .item_article {
+        margin: 1rem;
     }
 
     /* contact */
@@ -235,6 +281,7 @@ form {
 
     /* footer */
     footer {
+        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto auto;
     }
@@ -248,13 +295,59 @@ form {
         grid-column: 1 / span 2;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 550px) {
          /* header */
+
+         @keyframes move_logo {
+            0% {
+                transform: scale(1, 1);
+                left: 0%;
+            }
+            
+            25% {
+                transform: scale(0.75, 0.75);
+                left: 50%;
+            }
+        
+            50% {
+                transform: scale(0.5, 0.5) rotate(180deg);
+                left: calc(100% - 150px);
+            }
+        
+            75% {
+                transform: scale(0.75, 0.75);
+                left: 50%;
+            }
+           
+            100% {
+                transform: scale(1, 1);
+                left: 0% 
+            }
+        }
+
         header {
-            font-size: 0.5rem;
+            font-size: 0.75rem;
             .logo {
                 width: 180px;
                 height: 180px;
+            }
+
+            nav {
+                .li_nav {
+                    border-left: none;
+                    padding: 1rem;
+                }
+            }
+        }
+
+        .front_page {
+            height: 500px;
+        }
+
+        /* items */
+        .item_article {
+            p {
+                height: auto;
             }
         }
         /* best sellers */

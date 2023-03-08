@@ -1,6 +1,6 @@
-/*** mixins ***/
+/*** animations ***/
 
-/* header animation */
+/*** header animation ***/
 @keyframes move_logo {
     0% {
         transform: scale(1, 1);
@@ -14,7 +14,7 @@
 
     50% {
         transform: scale(0.5, 0.5) rotate(180deg);
-        left: 85%;
+        left: calc(100% - 300px);
     }
 
     75% {
@@ -27,6 +27,8 @@
         left: 0% 
     }
 }
+
+/*** mixins ***/
 
 /* flexbox */
 @mixin flex ($flex_flow, $justify-content,  $align-items) {
