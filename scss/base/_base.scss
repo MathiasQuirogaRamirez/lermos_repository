@@ -1,3 +1,7 @@
+/***variables***/
+$tablet: "tablet";
+$mobile: "mobile";
+
 /*** animations ***/
 
 /*** header animation ***/
@@ -30,7 +34,7 @@
 
 /*** mixins ***/
 
-/* flexbox */
+/*flexbox*/
 @mixin flex ($flex_flow, $justify-content,  $align-items) {
     display: flex;
     flex-flow: $flex_flow;
@@ -38,3 +42,35 @@
     align-items: $align-items;
 }
 
+/*slider*/
+@mixin active_carousel ($screen) {
+    @if ($screen == "tablet") {
+        .tablet {
+            visibility: visible;
+            height: auto;
+        }
+        .desktop {
+            visibility: hidden;
+            height: 0;
+        }
+        
+        .mobile {
+            visibility: hidden;
+            height: 0;
+        }
+    } 
+    @else {
+        .mobile {
+            visibility: visible;
+            height: auto;
+        }
+        .tablet {
+            visibility: hidden;
+            height: 0;
+        }
+        .desktop {
+            visibility: hidden;
+            height: 0;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 /*************** footer ***************/
 .container_footer {
-    @include flex(row nowrap, center, none);
+    @include flex(row nowrap, center, center);
  }
 
 footer {
@@ -48,14 +48,20 @@ footer {
     background-color: black;
     color: white;
     padding: 1rem;
-    h3 {
+
+    h5 {
+        font-family: $font-family-ms;
         color: $orange;
     }
     ul {
         list-style: none;
-        a {
-            text-decoration: none;
-            color: white;
+        /*delete margin (li bootstrap)*/
+        margin-right: 32px;
+        li {
+            a {
+                text-decoration: none;
+                color: white;
+            }
         }
     }
 }

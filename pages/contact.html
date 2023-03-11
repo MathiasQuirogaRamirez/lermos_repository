@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <!-- SEO -->
+    <title>Lermos | Contacto</title>
+    <meta name="description" content="Libreria independiente en Barcelona, talleres, eventos, ebooks, venta online, y mucho más,
+    si vienes a nuestra tienda o visitas la web no te iras con las manos vacías">
     <link rel="stylesheet" href="../css/style.css">
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="media/img/logo.png">
 </head>
@@ -27,32 +26,39 @@
         </nav>
     </header>    
 
-    <!-- container -->
-    <section class="form_container">
-        <section> 
-            <!-- form -->
-            <form action="#" method="get" enctype="application/x-www-form-urlencoded">      
-                <h1>Contactanos</h1>
-                <div class="flex_horizontal">
+    <div class="container_title">
+        <div class="triangle"></div>
+        <h1>Contacto</h1>
+    </div>
+
+    <div class="container_body">
+        <!-- container -->
+        <section class="form_container">
+            <section> 
+                <!-- form -->
+                <form action="#" method="get" enctype="application/x-www-form-urlencoded">      
+                    <h3>Contactanos</h3>
+                    <div class="flex_horizontal">
+                        <article>
+                            <label for="name_form">Nombre</label>
+                            <input type="text" name="name" id="name_form">           
+                        </article>
+                        <article>
+                            <label for="email_form">Correo</label>
+                            <input type="email" name="email" id="email_form">
+                        </article>
+                    </div>
                     <article>
-                        <label for="name_form">Nombre</label>
-                        <input type="text" name="name" id="name_form">           
+                        <label for="message_form">Mensaje</label>
+                        <textarea name="message" id="message_form" cols="30" rows="10"></textarea>
                     </article>
                     <article>
-                        <label for="email_form">Correo</label>
-                        <input type="email" name="email" id="email_form">
+                        <input type="submit" value="Enviar" id="button_send">
                     </article>
-                </div>
-                <article>
-                    <label for="message_form">Mensaje</label>
-                    <textarea name="message" id="message_form" cols="30" rows="10"></textarea>
-                </article>
-                <article>
-                    <input type="submit" value="Enviar" id="button_send">
-                </article>
-            </form>
+                </form>
+            </section>
         </section>
-    </section>
+    </div>
 
     <!-- footer -->
     <section class="container_footer">
@@ -84,9 +90,9 @@
            
             <!-- social media -->
             <article class="footer_bottom">
-                <a href="https://www.instagram.com/"><img src="../assets/images/instagram.png"></a>
-                <a href="https://www.pinterest.es/"><img src="../assets/images/pinterest.png"></a>                
-                <a href="https://twitter.com/?lang=es"><img src="../assets/images/twitter.png"></a>
+                <a href="https://www.instagram.com/"><img src="../assets/images/instagram.png" alt="miniatura instagram"></a>
+                    <a href="https://www.pinterest.es/"><img src="../assets/images/pinterest.png" alt="miniatura pinterest"></a>
+                    <a href="https://twitter.com/?lang=es"><img src="../assets/images/twitter.png" alt="miniatura twitter"></a>
             </article>
             <h5 class="footer_bottom">©Copyright 2023</h5>
         </footer>
