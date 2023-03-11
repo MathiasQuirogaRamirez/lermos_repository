@@ -489,7 +489,10 @@ h3 {
   }
   header nav .li_nav, header .nav_boostrap .li_nav {
     border-left: none;
-    padding: 1rem;
+    padding: 0.5rem;
+  }
+  header .nav_boostrap {
+    bottom: -3px;
   }
   .mobile {
     visibility: visible;

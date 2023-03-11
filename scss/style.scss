@@ -356,8 +356,13 @@ h3 {
                 nav {
                     .li_nav {
                         border-left: none;
-                        padding: 1rem;
+                        padding: 0.5rem;
                     }
+                }
+
+                .nav_boostrap {
+                    @extend nav;
+                    bottom: -3px;
                 }
             }
 
