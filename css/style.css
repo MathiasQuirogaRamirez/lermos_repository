@@ -477,7 +477,7 @@ div h2 {
     grid-column: 1/span 2;
   }
 }
-@media (max-width: 1000px) and (max-width: 50px) {
+@media (max-width: 1000px) and (max-width: 550px) {
   /* header */
   @keyframes move_logo {
     0% {
