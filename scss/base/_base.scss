@@ -30,6 +30,12 @@ $mobile: "mobile";
         transform: scale(1, 1);
         left: 0% 
     }
+} 
+
+@keyframes show_text {
+    100% {
+        overflow: visible;
+    }
 }
 
 /*** mixins ***/
