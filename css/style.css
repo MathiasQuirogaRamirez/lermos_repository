@@ -4,6 +4,7 @@
 /*titles*/
 /*subtitle and text*/
 /***variables***/
+/*$desktop is default value (not used)*/
 /*** animations ***/
 /*** header animation ***/
 @keyframes move_logo {
@@ -28,6 +29,7 @@
     left: 0%;
   }
 }
+/*** item text animation ***/
 @keyframes show_text {
   100% {
     overflow: visible;
@@ -36,12 +38,12 @@
 /*** mixins ***/
 /*flexbox*/
 /*slider*/
-/*** colors ***/ /*** header ***/
+/*** colors hex ***/ /*** header ***/
 header {
   position: relative;
   font-size: 1rem;
   background-color: #FFBD59;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #000000;
   /*** for boostrap ***/
 }
 header .logo {
@@ -63,11 +65,11 @@ header nav .li_nav, header .nav_boostrap .li_nav {
   display: inline;
   text-align: center;
   padding: 1rem;
-  border-left: 3px solid black;
+  border-left: 3px solid #000000;
 }
 header nav .li_nav .link_nav, header .nav_boostrap .li_nav .link_nav {
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 header .nav_boostrap {
   bottom: -3px;
@@ -86,7 +88,7 @@ footer {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   width: 100%;
-  background-color: black;
+  background-color: #000000;
   padding: 1rem;
   column-gap: 3rem;
   row-gap: 1rem;
@@ -100,15 +102,15 @@ footer ul {
   list-style: none;
 }
 footer ul li {
-  color: white;
+  color: #F8F9F9;
 }
 footer ul li a {
   text-decoration: none;
-  color: white;
+  color: #F8F9F9;
 }
 
 .footer_bottom {
-  color: white;
+  color: #F8F9F9;
   grid-column: 1/4;
   margin: 1rem;
 }
@@ -121,8 +123,8 @@ footer ul li a {
 
 /*********** footer  boostrap **************/
 .footer_bootstrap {
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #F8F9F9;
   padding: 1rem;
 }
 .footer_bootstrap h5 {
@@ -136,7 +138,7 @@ footer ul li a {
 }
 .footer_bootstrap ul li a {
   text-decoration: none;
-  color: white;
+  color: #F8F9F9;
 }
 
 /****** general ******/
@@ -154,11 +156,36 @@ h3 {
   font-family: "Montserrat Subrayada", sans-serif;
 }
 
-div h2 {
+/*** search bar ***/
+.search_bar, .search_bar_boostrap {
+  display: flex;
+  height: 2rem;
+  padding: 1rem 20% 1rem 20%;
+  background-color: #000000;
+}
+.search_bar input, .search_bar_boostrap input {
+  width: 100%;
+  padding: 0 1rem 0 1rem;
+  border-radius: 1rem 0 0 1rem;
+  border: 0;
+}
+.search_bar input[type=image], .search_bar_boostrap input[type=image] {
+  width: auto;
+  padding: 3px;
+  border-radius: 0 1rem 1rem 0;
+  border: 0;
   background-color: #FFBD59;
-  color: black;
-  text-align: center;
-  margin-bottom: 0;
+}
+
+/*** for boostrap ***/
+.search_bar_boostrap {
+  height: auto;
+}
+.search_bar_boostrap input {
+  height: 2rem;
+}
+.search_bar_boostrap input[type=image] {
+  height: 2rem;
 }
 
 .container_title {
@@ -169,19 +196,26 @@ div h2 {
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 100px solid black;
+  border-top: 100px solid #000000;
   border-right: 100px solid transparent;
 }
 .container_title h1 {
   position: absolute;
-  left: 0.5rem;
+  left: 1rem;
   top: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   z-index: 2;
   padding: 3px;
-  color: black;
-  border: 3px solid black;
+  color: #000000;
+  border: 3px solid #000000;
   background-color: #FFBD59;
+}
+
+div h2 {
+  background-color: #FFBD59;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 .container_body {
@@ -222,7 +256,7 @@ div h2 {
   height: 125px;
   overflow: hidden;
   background-image: url("../assets/images/background_item.jpg");
-  color: white;
+  color: #F8F9F9;
   transition: height 2000ms;
 }
 .item_article p:hover {
@@ -239,7 +273,7 @@ div h2 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 5px 5px 5px white;
+  box-shadow: inset 5px 5px 5px #F8F9F9;
 }
 
 /* Handle */
@@ -249,7 +283,7 @@ div h2 {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: black;
+  background: #000000;
 }
 
 /*************** index ***************/
@@ -266,14 +300,14 @@ div h2 {
   align-items: center;
   margin: 2rem 1rem 2rem 1rem;
   text-align: center;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #000000;
 }
 .round_image_article img {
   width: 200px;
   height: 200px;
   margin: 1rem;
   border-radius: 50%;
-  border: 3px solid black;
+  border: 3px solid #000000;
 }
 .round_image_article h3 {
   font-size: 1rem;
@@ -283,7 +317,7 @@ div h2 {
 .carousel-control-next-icon {
   background-color: #FFBD59;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid #000000;
 }
 
 /*************** best seller ***************/
@@ -325,7 +359,7 @@ div h2 {
 }
 .flex_container_horizontal p {
   font-size: 0.9rem;
-  color: white;
+  color: #F8F9F9;
 }
 
 .btn {
@@ -372,7 +406,7 @@ div h2 {
 }
 .form_container section form {
   background-color: #ffe4c4;
-  border: 3px solid black;
+  border: 3px solid #000000;
   border-radius: 1rem;
   padding: 2rem;
 }
@@ -396,7 +430,7 @@ div h2 {
 }
 .form_container section form textarea {
   width: 100%;
-  border: 2px solid black;
+  border: 2px solid #000000;
   border-radius: 1rem;
 }
 .form_container section form article {
@@ -507,10 +541,34 @@ div h2 {
   }
   header nav .li_nav, header .nav_boostrap .li_nav {
     border-left: none;
-    padding: 0.5rem;
+    padding: 0.1rem;
   }
   header .nav_boostrap {
     bottom: -3px;
+  }
+  /*** search bar ***/
+  .search_bar, .search_bar_boostrap {
+    padding: 0.5rem 5% 0.5rem 5%;
+  }
+  /*** for boostrap ***/
+  .search_bar_boostrap input {
+    height: 1.5rem;
+  }
+  .search_bar_boostrap input[type=image] {
+    height: 1.5rem;
+  }
+  .container_title .triangle {
+    border-top: 70px solid #000000;
+    border-right: 70px solid transparent;
+  }
+  .container_title h1 {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-size: 1rem;
+  }
+  .container_body {
+    margin-top: 70px;
   }
   .mobile {
     visibility: visible;
@@ -528,6 +586,9 @@ div h2 {
     height: 450px;
   }
   /* items */
+  .item_article div {
+    height: auto;
+  }
   .item_article p {
     height: auto;
   }
@@ -543,9 +604,13 @@ div h2 {
     justify-content: center;
     text-align: center;
   }
+  /* contact */
+  .form_container {
+    margin: 0.5rem;
+  }
   /* footer */
   footer {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto;
   }
   .footer_bottom {

@@ -1,6 +1,7 @@
 /***variables***/
 $tablet: "tablet";
 $mobile: "mobile";
+/*$desktop is default value (not used)*/
 
 /*** animations ***/
 
@@ -32,6 +33,7 @@ $mobile: "mobile";
     }
 } 
 
+/*** item text animation ***/
 @keyframes show_text {
     100% {
         overflow: visible;
@@ -41,7 +43,7 @@ $mobile: "mobile";
 /*** mixins ***/
 
 /*flexbox*/
-@mixin flex ($flex_flow, $justify-content,  $align-items) {
+@mixin flex ($flex_flow, $justify-content, $align-items) {
     display: flex;
     flex-flow: $flex_flow;
     justify-content: $justify-content;

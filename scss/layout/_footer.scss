@@ -8,7 +8,7 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     width: 100%;
-    background-color: black;
+    background-color: $black;
     padding: 1rem;
     column-gap: 3rem;
     row-gap: 1rem;
@@ -22,17 +22,17 @@ footer {
     ul {
         list-style: none;
         li {
-            color: white;
+            color: $white;
             a {
                 text-decoration: none;
-                color: white;
+                color: $white;
             }
         }
     }
 }
 
 .footer_bottom {
-    color: white;
+    color: $white;
     grid-column: 1 / 4;
     margin: 1rem;
 }
@@ -45,8 +45,8 @@ footer {
 
 /*********** footer  boostrap **************/
 .footer_bootstrap {
-    background-color: black;
-    color: white;
+    background-color: $black;
+    color: $white;
     padding: 1rem;
 
     h5 {
@@ -60,7 +60,7 @@ footer {
         li {
             a {
                 text-decoration: none;
-                color: white;
+                color: $white;
             }
         }
     }

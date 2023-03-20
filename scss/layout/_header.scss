@@ -1,10 +1,9 @@
 /*** header ***/
-
 header {
     position: relative;
     font-size: 1rem;
     background-color: $orange;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid $black;
 
     .logo {
         position: relative;
@@ -25,10 +24,10 @@ header {
             display: inline;
             text-align: center;
             padding: 1rem;
-            border-left: 3px solid black;
+            border-left: 3px solid $black;
             .link_nav {
                 text-decoration: none;
-                color: black;
+                color: $black;
             }
         }
     }
