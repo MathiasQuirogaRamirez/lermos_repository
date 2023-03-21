@@ -66,10 +66,18 @@ header nav .li_nav, header .nav_boostrap .li_nav {
   text-align: center;
   padding: 1rem;
   border-left: 3px solid #000000;
+  transition: all 1000ms;
 }
 header nav .li_nav .link_nav, header .nav_boostrap .li_nav .link_nav {
   text-decoration: none;
   color: #000000;
+}
+header nav .li_nav:hover, header .nav_boostrap .li_nav:hover {
+  background-color: #000000;
+  height: 100%;
+}
+header nav .li_nav:hover .link_nav, header .nav_boostrap .li_nav:hover .link_nav {
+  color: #FFBD59;
 }
 header .nav_boostrap {
   bottom: -3px;
@@ -202,7 +210,7 @@ h3 {
 .container_title h1 {
   position: absolute;
   left: 1rem;
-  top: 1rem;
+  top: 1.8rem;
   font-size: 1.5rem;
   z-index: 2;
   padding: 3px;
@@ -212,6 +220,7 @@ h3 {
 }
 
 div h2 {
+  font-size: 1.5rem;
   background-color: #FFBD59;
   color: #000000;
   text-align: center;
@@ -436,6 +445,9 @@ div h2 {
 .form_container section form article {
   padding: 1rem;
 }
+.form_container section form article #button_send {
+  background: #FFBD59;
+}
 
 /*** media query ***/
 @media (max-width: 1000px) {
@@ -509,7 +521,7 @@ div h2 {
   }
 }
 @media (max-width: 1000px) and (max-width: 550px) {
-  /* header */
+  /*animation*/
   @keyframes move_logo {
     0% {
       transform: scale(1, 1);
@@ -532,8 +544,10 @@ div h2 {
       left: 0%;
     }
   }
+  /* header */
   header {
     font-size: 0.75rem;
+    /* for bootstrap header */
   }
   header .logo {
     width: 180px;
@@ -546,25 +560,28 @@ div h2 {
   header .nav_boostrap {
     bottom: -3px;
   }
-  /*** search bar ***/
+  /* search bar */
   .search_bar, .search_bar_boostrap {
     padding: 0.5rem 5% 0.5rem 5%;
   }
-  /*** for boostrap ***/
+  /* for boostrap search */
   .search_bar_boostrap input {
     height: 1.5rem;
   }
   .search_bar_boostrap input[type=image] {
     height: 1.5rem;
   }
+  /* title page */
   .container_title .triangle {
     border-top: 70px solid #000000;
     border-right: 70px solid transparent;
   }
   .container_title h1 {
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
+    left: 0.8rem;
+    top: 1.1rem;
+    font-size: 1rem;
+  }
+  div h2 {
     font-size: 1rem;
   }
   .container_body {
@@ -598,6 +615,7 @@ div h2 {
   /* best sellers */
   .flex_container_vertical {
     margin-bottom: 2rem;
+    margin-right: 0;
   }
   .flex_container_horizontal {
     flex-wrap: wrap;

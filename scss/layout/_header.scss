@@ -25,9 +25,17 @@ header {
             text-align: center;
             padding: 1rem;
             border-left: 3px solid $black;
+            transition: all 1000ms;
             .link_nav {
                 text-decoration: none;
                 color: $black;
+            }
+        }
+        .li_nav:hover {
+            background-color: $black;
+            height: 100%;
+            .link_nav {
+                color: $orange;
             }
         }
     }
